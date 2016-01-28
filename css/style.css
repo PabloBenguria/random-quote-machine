@@ -1,0 +1,30 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body, a{
+  background-color: #e24141;
+}
+
+a{
+  color: #fff;
+}
+
+.row{
+  padding: 5%;  
+}
+
+#box{
+  width: auto;
+  height: auto;
+  background-color: grey;
+  border-radius: 5%;
+  margin-top: 10%;
+  padding-bottom: 20px;
+}
+
+.navbar-left, .navbar-right{
+  margin: 10px;
+}
+
