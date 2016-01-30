@@ -15,20 +15,23 @@ $(document).ready(function(){
     law5 : ' If everything seems to be going well, you have obviously overlooked something. '
   }
 
+ 
+  
   function changeColor(){
+    var randomColor = Math.random();
     var select;
-
-    if(Math.random() <= 0.2){
+  
+    if(randomColor <= 0.2){
       select = colors.color1;
     }
-    else if(Math.random() <= 0.4){
+    else if(randomColor <= 0.4){
       select = colors.color2;
     }
-    else if(Math.random() <= 0.6){
+    else if(randomColor <= 0.6){
       select = colors.color3;
     }
 
-    else if(Math.random() <= 0.8){
+    else if(randomColor <= 0.8){
       select = colors.color4;
     }
     else{
@@ -36,21 +39,21 @@ $(document).ready(function(){
     }
     return select;
   }
-
   
   function changeLaw(){
+    var randomLaw = Math.random();
     var select;
-
-    if(Math.random() <= 0.2){
+    
+    if(randomLaw <= 0.2){
       select = laws.law1;
     }
-    else if(Math.random() <= 0.4){
+    else if(randomLaw <= 0.4){
       select = laws.law2;
     }
-    else if(Math.random() <= 0.6){
+    else if(randomLaw <= 0.6){
       select = laws.law3;
     }
-    else if(Math.random() <= 0.8){
+    else if(randomLaw <= 0.8){
       select = laws.law4;
     }
     else{
@@ -58,13 +61,15 @@ $(document).ready(function(){
     }
     return select;
   }
+  
+  var selectLaw = changeLaw();
 
   $("#quote").click(function(){
     $("a, body").css("background-color", changeColor());
     $("cite").html(changeLaw());
   });
   
-  var link = "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=";
+  var link = "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" + selectLaw;
 
   $("#twitter").click(function(){
     $(this).attr("href"); 
